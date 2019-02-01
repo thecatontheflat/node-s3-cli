@@ -18,6 +18,7 @@ var argOptions = {
     'region': 'us-east-1',
     'default-mime-type': null,
     'add-header': null,
+    'endpoint': 'ams3.digitaloceanspaces.com',
   },
   'boolean': [
     'recursive',
@@ -88,6 +89,7 @@ function setup(secretAccessKey, accessKeyId) {
       secretAccessKey: secretAccessKey,
       sslEnabled: !args.insecure,
       region: args.region,
+      endpoint: args.endpoint,
     },
   });
   var cmd = args._.shift();
